@@ -3,7 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true, add_index :users, :name|
-|email|text|null: false, unique: true|
+|email|string|null: false, unique: true|
 
 ### Association
 - has_many :messages

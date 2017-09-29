@@ -4,7 +4,6 @@
 |------|----|-------|
 |name|string|null: false, unique: true, add_index :users, :name|
 |email|text|null: false, unique: true|
-|password|string|null: false|
 
 ### Association
 - has_many :messages

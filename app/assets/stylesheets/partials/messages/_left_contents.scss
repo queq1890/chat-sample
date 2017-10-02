@@ -24,7 +24,6 @@ float: left;
     height: 100px;
     align-items: center;
     letter-spacing: 5px;
-
     }
   }
 
@@ -43,5 +42,7 @@ float: left;
 }
 
 .right_contents {
+  width: calc(100vw - 300px);
   float: left;
+  background-color: #AAAAAA;
 }

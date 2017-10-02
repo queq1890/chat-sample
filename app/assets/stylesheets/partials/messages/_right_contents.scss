@@ -1,7 +1,7 @@
 .right_contents {
   width: calc(100vw - 300px);
   float: left;
-  background-color: #AAAAAA;
+  background-color: #FAFAFA;
 
   &__top {
     height: 100px;
@@ -9,6 +9,8 @@
     padding: 0 40px;
     font-size: 20px;
     color: #333333;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 6px;
 
     &__group {
     display: flex;
@@ -51,4 +53,11 @@
     background-color: #DDDDDD;
     padding: 0 40px;
   }
+}
+
+.message {
+  padding-top: 40px;
+  font-size: 16px;
+  color: #434A54;
+  font-weight: bold;
 }

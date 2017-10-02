@@ -52,6 +52,17 @@ float: left;
     padding: 0 40px;
     font-size: 20px;
     color: #333333;
+    display: flex;
+
+    &__group {
+    display: flex;
+    align-items: center;
+    }
+
+    &__edit {
+    display: flex;
+    align-items: center;
+    }
   }
 
   &__messages {

@@ -61,8 +61,15 @@
       text-indent: 10px;
     }
 
-    input[type="file"] {
-      width: 30px;
+    label {
+
+      input[type="file"] {
+      display:none;
+     }
+
+     i {
+      background-color: white;
+     }
     }
 
     input[type="submit"] {

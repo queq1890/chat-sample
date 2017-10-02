@@ -35,5 +35,7 @@
   .right_contents__input
     %form{:action => "/", :method => "post"}
       %input{type:"text",name:"message", placeholder:"type a message"}
-      %input{type:"file"}
+      %label
+        %input{type:"file"}
+        %i.fa.fa-cog
       %input{type:"submit", value:"Send"}

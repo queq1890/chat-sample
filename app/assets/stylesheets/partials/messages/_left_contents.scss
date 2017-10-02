@@ -45,4 +45,19 @@ float: left;
   width: calc(100vw - 300px);
   float: left;
   background-color: #AAAAAA;
+
+  &__top {
+    height: 100px;
+    background-color: white;
+  }
+
+  &__messages {
+    height: 600px;
+    background-color: #FAFAFA;
+  }
+
+  &__input {
+    height: 100px;
+    background-color: #DDDDDD;
+  }
 }

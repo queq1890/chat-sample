@@ -15,5 +15,12 @@ font-size: 16px;
   }
 
   &__group {
+    padding-top: 20px;
+    padding-left: 20px;
+
+    &--recent_comment {
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
   }
 }

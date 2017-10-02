@@ -17,10 +17,13 @@ font-size: 16px;
   &__group {
     padding-top: 20px;
     padding-left: 20px;
+    font-size: 15px;
 
     &--recent_comment {
+      padding-top: 5px;
       padding-bottom: 20px;
       padding-left: 20px;
+      font-size: 11px;
     }
   }
 }

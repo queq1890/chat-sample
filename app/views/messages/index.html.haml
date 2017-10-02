@@ -34,5 +34,6 @@
         aaa
   .right_contents__input
     %form{:action => "/", :method => "post"}
-      %input{name:"message", size:"100", placeholder:"type a message"}
-
+      %input{type:"text",name:"message", placeholder:"type a message"}
+      %input{type:"file"}
+      %input{type:"submit", value:"Send"}

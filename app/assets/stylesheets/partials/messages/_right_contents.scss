@@ -52,6 +52,26 @@
     height: 100px;
     background-color: #DDDDDD;
     padding: 0 40px;
+
+    input[type="text"] {
+      height: 50px;
+      margin: 20px 0;
+      width: calc(100% - 150px);
+      border-style: none;
+      text-indent: 10px;
+    }
+
+    input[type="file"] {
+      width: 30px;
+    }
+
+    input[type="submit"] {
+    width:  100px;
+    height: 50px;
+    background-color: #38AEF0;
+    color: #fff;
+    border-style: none;
+    }
   }
 }
 

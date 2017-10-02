@@ -2,8 +2,8 @@
   .left_contents__top
     .left_contents__top__user ユーザー名
     .left_contents__top__icons
-      %a.fa.fa-pencil-square-o{href:"#{}"}
-      %a.fa.fa-cog{href:"#{}"}
+      %a.fa.fa-pencil-square-o{href:"#{}",style:"text-decoration: none; color: #FFF;"}
+      %a.fa.fa-cog{href:"#{}", style:"text-decoration: none; color: #FFF;"}
   .left_contents__group グループ1
   .left_contents__group--recent_comment 最新のコメント
   .left_contents__group グループ2
@@ -38,5 +38,5 @@
       .mask
         %label
           %input{type:"file"}
-          %i.fa.fa-picture-o
+          %i.fa.fa-picture-o{style:"font-size: 20px;"}
       %input{type:"submit", value:"Send"}

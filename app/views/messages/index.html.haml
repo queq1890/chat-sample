@@ -2,8 +2,9 @@
   .left_contents__top
     .left_contents__top__user ユーザー名
     .left_contents__top__icons
-      %a.fa.fa-pencil-square-o{href:"#{}",style:"text-decoration: none; color: #FFF;"}
-      %a.fa.fa-cog{href:"#{}", style:"text-decoration: none; color: #FFF;"}
+      = link_to "", "/", class:"fa fa-pencil-square-o", style:"text-decoration: none; color: #FFF;"
+      = link_to "", "/", class:"fa fa-cog", style:"text-decoration: none; color: #FFF;"
+
   .left_contents__group グループ1
   .left_contents__group--recent_comment 最新のコメント
   .left_contents__group グループ2

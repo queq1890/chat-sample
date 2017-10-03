@@ -13,23 +13,23 @@
     margin-bottom: 6px;
 
     &__group {
-    display: flex;
-    align-items: center;
-    float: left;
-    padding-top: 35px;
+      display: flex;
+      align-items: center;
+      float: left;
+      padding-top: 35px;
     }
 
     &__edit {
-    display: flex;
-    align-items: center;
-    float: right;
-    margin-top: 28px;
-    text-decoration: none;
-    height: 40px;
-    border: 1px solid #38AEF0;
-    padding: 0 20px;
-    font-size: 16px;
-    color: #38AEF0;
+      display: flex;
+      align-items: center;
+      float: right;
+      margin-top: 28px;
+      text-decoration: none;
+      height: 40px;
+      border: 1px solid #38AEF0;
+      padding: 0 20px;
+      font-size: 16px;
+      color: #38AEF0;
     }
 
     &__members {
@@ -81,13 +81,13 @@
     }
 
     input[type="submit"] {
-    width:  100px;
-    height: 50px;
-    background-color: #38AEF0;
-    color: #fff;
-    border-style: none;
-    float: left;
-    margin-top: 20px;
+      width:  100px;
+      height: 50px;
+      background-color: #38AEF0;
+      color: #fff;
+      border-style: none;
+      float: left;
+      margin-top: 20px;
     }
   }
 }

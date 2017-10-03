@@ -43,7 +43,7 @@ $light_blue_button-color: #38AEF0;
   }
 
   &__messages {
-    height: 600px;
+    height: calc(100vh - 207px);
     padding: 0 40px;
     font-size: 14px;
     color: #434A54;

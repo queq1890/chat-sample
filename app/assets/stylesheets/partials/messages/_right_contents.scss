@@ -1,3 +1,5 @@
+$light_blue_button-color: #38AEF0;
+
 .right_contents {
   width: calc(100vw - 300px);
   float: left;
@@ -26,10 +28,10 @@
       margin-top: 28px;
       text-decoration: none;
       height: 40px;
-      border: 1px solid #38AEF0;
+      border: 1px solid $light_blue_button-color;
       padding: 0 20px;
       font-size: 16px;
-      color: #38AEF0;
+      color: $light_blue_button-color;
     }
 
     &__members {
@@ -42,7 +44,6 @@
 
   &__messages {
     height: 600px;
-    background-color: #FAFAFA;
     padding: 0 40px;
     font-size: 14px;
     color: #434A54;
@@ -69,7 +70,7 @@
     &__submit {
       width:  100px;
       height: 50px;
-      background-color: #38AEF0;
+      background-color: $light_blue_button-color;
       color: #fff;
       border-style: none;
       float: left;
@@ -90,7 +91,6 @@
 
 .message {
   padding-top: 40px;
-  color: #434A54;
 
   &__user {
     float: left;

@@ -1,0 +1,140 @@
+.left_contents
+  .left_contents__top
+    .left_contents__top__user ユーザー名
+    .left_contents__top__icons
+      = link_to "", "/", class:"fa fa-pencil-square-o", style:"text-decoration: none; color: #FFF;"
+      = link_to "", "/", class:"fa fa-cog", style:"text-decoration: none; color: #FFF;"
+
+  .left_contents__group グループ1
+  .left_contents__group__recent_comment 最新のコメント
+  .left_contents__group グループ2
+  .left_contents__group__recent_comment 最新のコメント
+
+.right_contents
+  .right_contents__top
+    .right_contents__top__group
+      グループ名
+    = link_to "Edit", "/", class:"right_contents__top__edit"
+    .right_contents__top__members
+      Member：仮のメンバー
+  .right_contents__messages
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+    .message
+      .message__user
+        ユーザー名
+      .message__date
+        2017/10/02 06:31
+      .message__content
+        aaa
+  .right_contents__input
+    %form{:action => "/"}
+      %input.right_contents__input__text{type:"text",name:"message", placeholder:"type a message"}
+      .mask
+        %label
+          %input.right_contents__input__file{type:"file"}
+          %i.fa.fa-picture-o{style:"font-size: 20px;"}
+      %input.right_contents__input__submit{type:"submit", value:"Send"}

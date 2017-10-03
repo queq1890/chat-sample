@@ -1,0 +1,42 @@
+.left_contents {
+  width: 300px;
+  height: 100vh;
+  background-color: #2f3e51;
+  color: #FFF;
+  font-size: 16px;
+  float: left;
+
+  &__top {
+    background-color: #253141;
+    display: flex;
+    padding: 0 20px;
+
+    &__user {
+      height: 100px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      width: 260px;
+    }
+
+    &__icons {
+      display: flex;
+      height: 100px;
+      align-items: center;
+      letter-spacing: 5px;
+    }
+  }
+
+  &__group {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+
+    &__recent_comment {
+      padding-top: 5px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      font-size: 11px;
+    }
+  }
+}

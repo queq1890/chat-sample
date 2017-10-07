@@ -10,7 +10,7 @@
       - @group.users.each do |user|
         = " #{user.name}"
   .right_contents__messages
-    - @messages.each do |message|
+    - @group.messages.each do |message|
       .message
         .message__user
           = message.user.name

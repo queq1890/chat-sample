@@ -9,4 +9,5 @@
   - current_user.groups.each do |group|
     .left_contents__group
       = group.name
-    .left_contents__group__recent_comment 最新のコメント
+    .left_contents__group__recent_comment
+      = group.messages.order(created_at: :desc).take.try(:body)

@@ -8,18 +8,22 @@
     .right_contents__top__members
       Member：仮のメンバー
   .right_contents__messages
-    .message
-      .message__user
-        ユーザー名
-      .message__date
-        2017/10/02 06:31
-      .message__content
-        aaa
+    - @messages.each do |message|
+      .message
+        .message__user
+          = message.user.name
+        .message__date
+          2017/10/02 06:31
+        .message__content
+          - if message.body?
+            = message.body
+          - else
+            = image_tag message.image
   .right_contents__input
     = form_for [@group, @message] do |f|
       = f.text_field :body, class:"right_contents__input__text", placeholder:"type a message"
       .mask
         %label
-          / %input.right_contents__input__file{type:"file"}
-          / %i.fa.fa-picture-o{style:"font-size: 20px;"}
+          = f.file_field :image, class:"right_contents__input__file"
+          %i.fa.fa-picture-o{style:"font-size: 20px;"}
       = f.submit "Send",class:"right_contents__input__submit"

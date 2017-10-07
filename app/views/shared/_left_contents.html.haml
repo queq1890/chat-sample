@@ -8,6 +8,6 @@
 
   - current_user.groups.each do |group|
     .left_contents__group
-      = link_to "#{group.name}", "/groups/#{params[:id]}/messages/", style:"text-decoration: none; color: #FFF;"
+      = link_to "#{group.name}", "/groups/#{group[:id]}/messages/", style:"text-decoration: none; color: #FFF;"
     .left_contents__group__recent_comment
       = group.messages.order(created_at: :desc).take.try(:body)

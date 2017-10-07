@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!, only: :index
   before_action :set_group, only: [:edit, :update]
 
   def index
@@ -13,7 +14,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
       if @group.save
         flash[:notice] = "グループを作成しました"
-        redirect_to root_path
+        redirect_to "/groups/#{@group.id}/messages"
       else
         render 'new'
       end
@@ -25,7 +26,7 @@ class GroupsController < ApplicationController
   def update
       if @group.update(group_params)
         flash[:notice] = "グループを編集しました"
-        redirect_to root_path
+        redirect_to "/groups/#{@group.id}/messages"
       else
         render 'edit'
       end

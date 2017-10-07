@@ -16,10 +16,10 @@
       .message__content
         aaa
   .right_contents__input
-    %form{:action => "/"}
-      %input.right_contents__input__text{type:"text",name:"message", placeholder:"type a message"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :body, class:"right_contents__input__text", placeholder:"type a message"
       .mask
         %label
-          %input.right_contents__input__file{type:"file"}
-          %i.fa.fa-picture-o{style:"font-size: 20px;"}
-      %input.right_contents__input__submit{type:"submit", value:"Send"}
+          / %input.right_contents__input__file{type:"file"}
+          / %i.fa.fa-picture-o{style:"font-size: 20px;"}
+      = f.submit "Send",class:"right_contents__input__submit"

@@ -3,22 +3,14 @@
 .right_contents
   .right_contents__top
     .right_contents__top__group
-      グループ名
-    = link_to "Edit", "/", class:"right_contents__top__edit"
+      = @group.name
+    = link_to "Edit", edit_group_path(@group), class:"right_contents__top__edit"
     .right_contents__top__members
-      Member：仮のメンバー
+      Member:
+      - @group.users.each do |user|
+        = " #{user.name}"
   .right_contents__messages
-    - @messages.each do |message|
-      .message
-        .message__user
-          = message.user.name
-        .message__date
-          2017/10/02 06:31
-        .message__content
-          - if message.body?
-            = message.body
-          - else
-            = image_tag message.image
+    = render @group.messages
   .right_contents__input
     = form_for [@group, @message] do |f|
       = f.text_field :body, class:"right_contents__input__text", placeholder:"type a message"

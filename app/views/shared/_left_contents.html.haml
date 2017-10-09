@@ -6,7 +6,4 @@
       = link_to "", new_group_path, class:"fa fa-pencil-square-o", style:"text-decoration: none; color: #FFF;"
       = link_to "", edit_user_registration_path, class:"fa fa-cog", style:"text-decoration: none; color: #FFF;"
 
-  - current_user.groups.each do |group|
-    .left_contents__group
-      = group.name
-    .left_contents__group__recent_comment 最新のコメント
+  = render current_user.groups

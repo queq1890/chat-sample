@@ -2,7 +2,7 @@
   .message__user
     = message.user.name
   .message__date
-    2017/10/02 06:31
+    = message.created_at
   .message__content
     - if message.body?
       = message.body

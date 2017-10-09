@@ -6,14 +6,4 @@
       = link_to "", new_group_path, class:"fa fa-pencil-square-o", style:"text-decoration: none; color: #FFF;"
       = link_to "", edit_user_registration_path, class:"fa fa-cog", style:"text-decoration: none; color: #FFF;"
 
-  - current_user.groups.each do |group|
-    .left_contents__group
-      = link_to group_messages_path(group), style:"text-decoration: none; color: #FFF;" do
-        = group.name
-        .left_contents__group__recent_comment
-          - if group.messages.order(created_at: :desc).take.try(:image).present?
-            画像が投稿されました
-          - elsif group.messages.order(created_at: :desc).take.try(:body).present?
-            = group.messages.order(created_at: :desc).take.try(:body)
-          - else
-            まだ投稿はありません
+  = render partial: '/shared/left_contents__group', collection: current_user.groups, as: 'group'

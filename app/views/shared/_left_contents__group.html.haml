@@ -1,0 +1,10 @@
+.left_contents__group
+  = link_to group_messages_path(group), style:"text-decoration: none; color: #FFF;" do
+    = group.name
+    .left_contents__group__recent_comment
+      - if group.messages.order(created_at: :desc).take.try(:image).present?
+        画像が投稿されました
+      - elsif group.messages.order(created_at: :desc).take.try(:body).present?
+        = group.messages.order(created_at: :desc).take.try(:body)
+      - else
+        まだ投稿はありません

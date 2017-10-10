@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :group do
-    name "hoge"
+    name Faker::Movie.quote
   end
 end

@@ -41,6 +41,12 @@ describe Message do
     end
 
     it "is invalid without a user_id" do
+      user = create(:user)
+      group = create(:group)
+      message = build(:message, user_id: nil, group_id: group.id)
+      message.valid?
+      binding.pry
+      expect(message.errors[:user]).to include("を入力してください")
     end
   end
 end

@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'pry-rails'
 
 describe Message do
   describe '#create' do
@@ -45,7 +44,6 @@ describe Message do
       group = create(:group)
       message = build(:message, user_id: nil, group_id: group.id)
       message.valid?
-      binding.pry
       expect(message.errors[:user]).to include("を入力してください")
     end
   end

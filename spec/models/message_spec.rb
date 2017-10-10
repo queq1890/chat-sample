@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry-rails'
 
 describe Message do
   describe '#create' do
@@ -32,6 +33,11 @@ describe Message do
     end
 
     it "is invalid without a group_id" do
+      user = create(:user)
+      group = create(:group)
+      message = build(:message, user_id: user.id, group_id: nil)
+      message.valid?
+      expect(message.errors[:group]).to include("を入力してください")
     end
 
     it "is invalid without a user_id" do

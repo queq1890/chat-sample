@@ -10,9 +10,17 @@ describe MessagesController, type: :controller do
       before do
         login_user user
       end
+
+      it "assigns the requested message to @message" do
+      end
+
+      it "renders the :index template" do
+      end
     end
 
     context 'when user does not sign_in' do
+      it "redirects to /users/sign_in" do
+      end
     end
   end
 

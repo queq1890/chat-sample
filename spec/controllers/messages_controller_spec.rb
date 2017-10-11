@@ -25,13 +25,21 @@ describe MessagesController, type: :controller do
   end
 
   describe 'POST #create' do
-    context 'when user does sign_in' do
+    context 'when user does sign_in && @message successfully saved' do
+      before do
+        login_user user
+      end
+    end
+
+    context 'when user does sign_in && @message failed to save' do
       before do
         login_user user
       end
     end
 
     context 'when user does not sign_in' do
+      it "redirects to /users/sign_in" do
+      end
     end
   end
 end

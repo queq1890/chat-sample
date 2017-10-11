@@ -14,6 +14,9 @@ describe MessagesController, type: :controller do
       it "assigns the requested message to @message" do
       end
 
+      it "assigns the requested message to @group" do
+      end
+
       it "renders the :index template" do
       end
     end

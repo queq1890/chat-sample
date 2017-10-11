@@ -23,7 +23,6 @@ class MessagesController < ApplicationController
     end
 
     def set_messages_group
-      @messages = Message.all
       @group = Group.find(params[:group_id])
     end
 end

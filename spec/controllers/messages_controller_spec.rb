@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry-rails'
 
 describe MessagesController, type: :controller do
   let(:user) { create(:user) }
@@ -12,6 +13,8 @@ describe MessagesController, type: :controller do
       end
 
       it "assigns the requested message to @message" do
+        get :index, params: { group_id: group }
+        expect(assigns(:message).attributes).to eq(blank_message.attributes)
       end
 
       it "assigns the requested message to @group" do

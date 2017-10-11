@@ -1,10 +1,12 @@
 require 'rails_helper'
+require 'pry-rails'
 
 describe Message do
   describe '#create' do
 
     it "is valid with a body" do
       message = build(:message, image: nil)
+      binding.pry
       expect(message).to be_valid
     end
 

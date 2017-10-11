@@ -29,11 +29,23 @@ describe MessagesController, type: :controller do
       before do
         login_user user
       end
+
+      it "successfully saved @message" do
+      end
+
+      it "redirects to group_messages_path" do
+      end
     end
 
     context 'when user does sign_in && @message failed to save' do
       before do
         login_user user
+      end
+
+      it "failed to save @message" do
+      end
+
+      it "renders a view of messages/index" do
       end
     end
 

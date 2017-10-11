@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe MessagesController do
+describe MessagesController, type: :controller do
 
   describe 'GET #index' do
   end

@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'pry-rails'
+require 'pry'
 
 describe MessagesController, type: :controller do
   let(:user) { create(:user) }
@@ -10,17 +10,20 @@ describe MessagesController, type: :controller do
     context 'when user does sign_in' do
       before do
         login_user user
+        get :index, params: { group_id: user.groups.first.id }
       end
 
       it "assigns the requested message to @message" do
-        get :index, params: { group_id: group }
+        blank_message = Message.new
         expect(assigns(:message).attributes).to eq(blank_message.attributes)
       end
 
       it "assigns the requested message to @group" do
+        expect(assigns(:group)).to eq(user.groups.first)
       end
 
       it "renders the :index template" do
+        expect(response).to render_template :index
       end
     end
 

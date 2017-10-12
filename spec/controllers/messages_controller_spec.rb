@@ -22,7 +22,7 @@ describe MessagesController, type: :controller do
         expect(assigns(:group)).to eq(user.groups.first)
       end
 
-      it "renders the :index template" do
+      it "renders index" do
         expect(response).to render_template :index
       end
     end
@@ -64,7 +64,7 @@ describe MessagesController, type: :controller do
         end.to change(Message, :count).by(0)
       end
 
-      it "renders a view of messages/index" do
+      it "renders index" do
         post :create, params: { group_id: user.groups.first.id, message: attributes_for(:message, body: nil, image: nil) }
         expect(response).to render_template :index
       end

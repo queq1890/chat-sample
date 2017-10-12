@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'pry'
 
 describe MessagesController, type: :controller do
   let(:user) { create(:user) }

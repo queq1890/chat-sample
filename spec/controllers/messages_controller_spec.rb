@@ -28,7 +28,7 @@ describe MessagesController, type: :controller do
     end
 
     context 'when user does not sign_in' do
-      it "redirects to /users/sign_in" do
+      it "redirects to new_user_session_path" do
         get :index, params: { group_id: user.groups.first.id }
         expect(response).to redirect_to new_user_session_path
       end
@@ -71,7 +71,7 @@ describe MessagesController, type: :controller do
     end
 
     context 'when user does not sign_in' do
-      it "redirects to /users/sign_in" do
+      it "redirects to new_user_session_path" do
         post :create, params: { group_id: user.groups.first.id, message: attributes_for(:message) }
         expect(response).to redirect_to new_user_session_path
       end

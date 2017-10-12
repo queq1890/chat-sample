@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :authenticate_user!, only: :index
+  before_action :authenticate_user!, only: [:index, :create]
   before_action :set_messages_group, only: [:index, :create]
 
   def index
@@ -23,7 +23,6 @@ class MessagesController < ApplicationController
     end
 
     def set_messages_group
-      @messages = Message.all
       @group = Group.find(params[:group_id])
     end
 end

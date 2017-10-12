@@ -42,9 +42,14 @@ describe MessagesController, type: :controller do
       end
 
       it "successfully saved @message" do
+        expect{
+          post :create, params: { group_id: user.groups.first.id, message: attributes_for(:message) }
+        }.to change(Message, :count).by(1)
       end
 
       it "redirects to group_messages_path" do
+        post :create, params: { group_id: user.groups.first.id, message: attributes_for(:message) }
+        expect(response).to redirect_to group_messages_path(user.groups.first.id)
       end
     end
 
@@ -54,14 +59,21 @@ describe MessagesController, type: :controller do
       end
 
       it "failed to save @message" do
+        expect do
+          post :create, params: { group_id: user.groups.first.id, message: attributes_for(:message, body: nil, image: nil) }
+        end.to change(Message, :count).by(0)
       end
 
       it "renders a view of messages/index" do
+        post :create, params: { group_id: user.groups.first.id, message: attributes_for(:message, body: nil, image: nil) }
+        expect(response).to render_template :index
       end
     end
 
     context 'when user does not sign_in' do
       it "redirects to /users/sign_in" do
+        post :create, params: { group_id: user.groups.first.id, message: attributes_for(:message) }
+        expect(response).to redirect_to new_user_session_path
       end
     end
   end

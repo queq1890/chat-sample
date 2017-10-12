@@ -18,7 +18,7 @@ describe MessagesController, type: :controller do
         expect(assigns(:message).attributes).to eq(blank_message.attributes)
       end
 
-      it "assigns the requested message to @group" do
+      it "assigns the requested group to @group" do
         expect(assigns(:group)).to eq(user.groups.first)
       end
 

@@ -38,4 +38,7 @@ function appendNouser(user) {
     alert('ユーザー検索に失敗しました');
   })
   });
+  $(document).on("click",".user-search-add",function(){
+    console.log("アアアア")
+  });
 });

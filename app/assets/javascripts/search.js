@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load', function(){
   var search_list = $('#user-search-result');
-  var group_user_list = $('#chat-group-users');
 
 function appendUser(user) {
   var html = `<div class="chat-group-user clearfix">
@@ -23,7 +22,7 @@ function appendGroupUser(name, id) {
                   <p class='chat-group-user__name'>${ name }</p>
                   <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
                 </div>`
-    group_user_list.append(html);
+    $('#chat-group-users').append(html);
   }
 
   $("#user-search-field").on("keyup", function(){

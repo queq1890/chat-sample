@@ -1,6 +1,7 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   var search_list = $('#user-search-result');
   var group_user_list = $('#chat-group-users');
+
 function appendUser(user) {
   var html = `<div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">${user.name}</p>
@@ -53,5 +54,8 @@ function appendGroupUser(name, id) {
     var group_user_id = $(this).attr("data-user-id");
     $(this).parent().remove();
     appendGroupUser(group_user_name, group_user_id);
+  });
+  $(document).on("click",".user-search-remove",function(){
+    $(this).parent().remove();
   });
 });

@@ -11,8 +11,8 @@ $(function() {
                     ${message.created_at}
                   </div>
                   <div class="message__content">
+                    ${addImage} </br>
                     ${message.body}
-                    ${addImage}
                   </div>
                 </div>`
     return html;

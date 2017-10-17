@@ -16,6 +16,7 @@
     .chat-group-form__field--left
       = f.label :"チャットメンバー", class:"chat-group-form__label"
     .chat-group-form__field--right
+      #chat-group-users
       - if @group.users.present?
         - @group.users.each do |user|
           .chat-group-user.clearfix.js-chat-member

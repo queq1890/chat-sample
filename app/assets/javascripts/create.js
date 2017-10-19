@@ -1,20 +1,20 @@
-$(function() {
+$(document).on('turbolinks:load',function() {
   function buildHTML(message){
     if (message.image !== "") {
       var addImage = `<img src="${message.image}">`
      }
-    var html = `<div class="message">
-                  <div class="message__user">
-                    ${message.user_name}
-                  </div>
-                  <div class="message__date">
-                    ${message.created_at}
-                  </div>
-                  <div class="message__content">
-                    ${addImage} </br>
-                    ${message.body}
-                  </div>
-                </div>`
+    var html =`<div class="message" data-id="${message.id}">
+                <div class="message__user">
+                  ${message.user_name}
+                </div>
+                <div class="message__date">
+                  ${message.created_at}
+                </div>
+                <div class="message__content">
+                  ${addImage} </br>
+                  ${message.body}
+                </div>
+              </div>`
     return html;
   }
   $('#chat_form').on('submit', function(e){

@@ -1,10 +1,14 @@
-.message
+.message{"data-id":"#{message.id}"}
   .message__user
     = message.user.name
   .message__date
     = message.created_at
   .message__content
-    - if message.body?
-      = message.body
-    - else
+    - if message.body? && message.image?
       = image_tag message.image
+      %br
+      = message.body
+    - elsif message.image?
+      = image_tag message.image
+    - else
+      = message.body

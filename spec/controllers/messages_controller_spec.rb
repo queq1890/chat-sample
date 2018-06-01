@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 describe MessagesController, type: :controller do
   let(:user) { create(:user) }
@@ -41,9 +42,9 @@ describe MessagesController, type: :controller do
       end
 
       it "successfully saved @message" do
-        expect{
+        expect do
           post :create, params: { group_id: user.groups.first.id, message: attributes_for(:message) }
-        }.to change(Message, :count).by(1)
+        end.to change(Message, :count).by(1)
       end
 
       it "redirects to group_messages_path" do
